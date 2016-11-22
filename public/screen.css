@@ -9,6 +9,15 @@ body {
   justify-content: center;
   flex-direction: column;
   background-color: hsl(201, 53%, 56%);
+  position: relative;
+}
+
+.droplet {
+  height: 40px;
+  width: 20px;
+  background-image: url(droplet.svg);
+  background-repeat: no-repeat;
+  position: absolute;
 }
 
 section {
@@ -31,9 +40,4 @@ button {
   background-color: hsl(194, 86%, 76%);
   color: white;
   text-shadow: hsl(240, 0%, 66%);
-}
-
-.droplet {
-  height: 40px;
-  width: 20px;
 }
