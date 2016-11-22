@@ -5,4 +5,35 @@ html {
 body {
   margin: 0;
   font: 16px / 1 sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(201, 53%, 56%);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 5em;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  border-width: thick;
+  border-color: hsl(203, 100%, 66%);
+  background-color: hsl(194, 86%, 76%);
+  color: white;
+  text-shadow: hsl(240, 0%, 66%);
+}
+
+.droplet {
+  height: 40px;
+  width: 20px;
 }
