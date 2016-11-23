@@ -6,7 +6,7 @@ const drop = qs('.droplet')
 const main = () => {
     drop.style.visibility = "visible"
     drop.style.top = "0px"
-    drop.style.left = "0px"
+    drop.style.left = "Math.round(Math.random) + px"
   setInterval(() => {
     drop.style.top = '0px'
   }, 6000)
