@@ -39,8 +39,7 @@ const animate = () => {
 setInterval(animate, 9)
 
 const main = () => {
-  //qs('button').addEventListener('click',)
-  createDrop()
+qs('button').addEventListener('click', createDrop)
 }
   /*drop.style.visibility = "visible"
   drop.style.top = "0px"
@@ -58,7 +57,7 @@ const main = () => {
    drop.style.backgroundColor = 'green'
  }, 5000)
 */
-qs('button').addEventListener('click', main)
+//qs('button').addEventListener('click', main)
 
 //document.addEventListner('click', main)
-//document.addEventListener('DOMContentLoaded', main)
+document.addEventListener('DOMContentLoaded', main)
