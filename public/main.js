@@ -11,7 +11,6 @@ const createDrop = () => {
   createDiv.style.left = `${Math.round(Math.random() * document.body.clientWidth)}px`
   createDiv.className = 'droplet'
   document.querySelector('div.drops').appendChild(createDiv)
-  console.log("drip drop")
 }
 //const randomNumber = () => {
 //  Math.floor((Math.random() * 100))
@@ -23,13 +22,28 @@ const createDrop = () => {
 const animate = () => {
   const drops = qsa('.droplet')
   for (let i = 0; i < drops.length; i++) {
+    console.log(drops[i].style.top)
+    console.log(i)
+    // if (drops[i].style.top < '8px') {
     drops[i].style.top = `${parseInt(drops[i].style.top) + 1}px`
-  
-    //drops[i].style.left = `${Math.round(Math.random * document.clientWidth)}px`
+  //   console.log('drop')
+  // } else {
+  //   qs('div.drops').removeChild(drops[i])
+  //   console.log('stop')
+  // }
   }
 }
 
-
+const stopAnimation = () => {
+  const drops = qsa('.droplet')
+  for (let i = 0; i < drops.length; i++) {
+    //console.log('stop')
+    if (drops[i].style.top === '500px') {
+      qs('div.drops').removeChild(drops[i])
+      console.log(document.body.clientHeight)
+    }
+  }
+}
 
 /* Main function:
   When a button is clicked, call CreateDrop function
@@ -37,6 +51,7 @@ const animate = () => {
 const main = () => {
   qs('button').addEventListener('click', createDrop)
   setInterval(animate, 9)
-}
+  setInterval(stopAnimation, 9)
+  }
 
 document.addEventListener('DOMContentLoaded', main)
