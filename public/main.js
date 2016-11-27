@@ -24,6 +24,7 @@ const animate = () => {
   const drops = qsa('.droplet')
   for (let i = 0; i < drops.length; i++) {
     drops[i].style.top = `${parseInt(drops[i].style.top) + 1}px`
+  
     //drops[i].style.left = `${Math.round(Math.random * document.clientWidth)}px`
   }
 }
