@@ -33,10 +33,9 @@ const animate = () => {
   // }
   }
 }
-const ht = document.body.clientHeight + 'px'
-console.log(ht)
 
 const stopAnimation = () => {
+  const ht = document.body.clientHeight + 'px'
   const drops = qsa('.droplet')
   for (let i = 0; i < drops.length; i++) {
     //console.log('stop')
