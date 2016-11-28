@@ -33,14 +33,16 @@ const animate = () => {
   // }
   }
 }
+const ht = document.body.clientHeight + 'px'
+console.log(ht)
 
 const stopAnimation = () => {
   const drops = qsa('.droplet')
   for (let i = 0; i < drops.length; i++) {
     //console.log('stop')
-    if (drops[i].style.top === '500px') {
+    if (drops[i].style.top === ht) {
       qs('div.drops').removeChild(drops[i])
-      console.log(document.body.clientHeight)
+
     }
   }
 }
